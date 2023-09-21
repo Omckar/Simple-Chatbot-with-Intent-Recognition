@@ -6,11 +6,10 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import Adam
 
-# Define a simple tokenizer function
+
 def simple_tokenizer(text):
     return text.lower().split()
 
-# Load intents dynamically from intents.json
 with open('intents.json', 'r') as file:
     intents = json.load(file)
 
@@ -21,11 +20,9 @@ ignore_letters = ['.', '?', '!', ',', ';']
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:
-        # Tokenize using the simple tokenizer
         word_list = simple_tokenizer(pattern)
         words.extend(word_list)
 
-        # Use 'tag' if present, otherwise use 'tags'
         tag_key = 'tag' if 'tag' in intent else 'tags'
         documents.append((word_list, intent[tag_key]))
 
@@ -55,7 +52,6 @@ for document in documents:
     output_row[classes.index(document[1])] = 1
     training.append([bag, output_row])
 
-# Pad the sequences so they have the same length
 max_sequence_length = max(len(item[0]) for item in training)
 for i, item in enumerate(training):
     training[i][0] += [0] * (max_sequence_length - len(item[0]))
