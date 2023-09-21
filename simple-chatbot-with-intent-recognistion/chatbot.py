@@ -5,7 +5,6 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 
-# Set TensorFlow logging level to suppress verbose messages
 tf.get_logger().setLevel('ERROR')
 
 def load_intents(file_path):
