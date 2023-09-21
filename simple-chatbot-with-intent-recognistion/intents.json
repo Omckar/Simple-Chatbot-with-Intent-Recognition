@@ -1,0 +1,33 @@
+{"intents": [
+  {
+    "tag": "greetings",
+    "patterns": ["hello", "hi", "hey", "good day", "greetings", "whats up", "how is it going?"],
+    "responses": ["Hello!", "Hey!", "Hello, What can I do for you?"]
+  },
+  {
+    "tag": "goodbye",
+    "patterns": ["cya", "see you later", "bye", "goodbye", "I am leaving", "Have a good day", "cao", "see ya"],
+    "responses": ["Sad to see you go :(", "Talk to you later!", "Goodbye"]
+  },
+  {
+    "tag": "age",
+    "patterns": ["how old are you?", "whats your age", "age?"],
+    "responses": ["My owner is 21 years old!", "21 and going", "21!"]
+  },
+  {
+    "tag": "name",
+    "patterns": ["whats your name", "what should i call you?", "what can i call you", "who are you", "name?", "can you tell me your name?"],
+    "responses": ["Ziolite", "My name is Ziolite!", "Some poeple call me Ziolite"]
+  },
+  {
+    "tag": "stock",
+    "patterns": ["what are my stock", "stock?", "stocks?"],
+    "responses": ["Good!", "Buy some more!", "Good as always"]
+  },
+  {
+    "tag": "weather",
+    "patterns": ["what is weather like?", "weather?"],
+    "responses": ["Good weather!", "Not bad!"]
+  }
+]
+}
